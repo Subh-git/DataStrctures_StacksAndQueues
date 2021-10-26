@@ -32,7 +32,7 @@ namespace StacksLinkedList_Day14
             Node temp = this.top;
             if (temp == null)
             {
-                Console.WriteLine("Linked list is empty");
+                Console.WriteLine("Stack is empty");
             }
             while (temp != null)
             {
@@ -40,6 +40,33 @@ namespace StacksLinkedList_Day14
                 temp = temp.next;
             }
         }
+
+        internal void Peek()               //this method tells us about the first element of the stack.it just views.
+        {
+            if (this.top == null)
+                Console.WriteLine("The stacks is empty!");
+            Console.WriteLine("{0} is in the top of the stack.", this.top.data);
+
+        }
+
+        internal void Pop()               //deletes the first node of the stack
+        {
+            if (this.top == null)
+                Console.WriteLine("Deletion is not posssible");
+
+            Console.WriteLine("Deleted node from stack: " + this.top.data);  //prints the deleted node
+            this.top = this.top.next;
+        }
+
+        internal void IsEmpty()          //this repreatedly calls the pop method that will delete the first element from the stack in each iteration
+        {
+            while(this.top != null)
+            {
+                Peek();
+                Pop();
+            }
+        }
+
 
     }
 }
