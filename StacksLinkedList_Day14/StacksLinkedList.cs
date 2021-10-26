@@ -86,6 +86,14 @@ namespace StacksLinkedList_Day14
             Console.WriteLine("{0} added into Queue", node.data);
         }
 
+        internal void Dequeue()               //deletes the first node of the queue
+        {
+            if (this.top == null)
+                Console.WriteLine("Deletion is not posssible");
+
+            Console.WriteLine("Deleted node from Queue: " + this.top.data);  //prints the deleted node
+            this.top = this.top.next;
+        }
 
 
     }

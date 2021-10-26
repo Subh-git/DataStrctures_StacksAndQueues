@@ -7,10 +7,12 @@ namespace StacksLinkedList_Day14
         static void Main(string[] args)
         {
             StacksLinkedList stacks = new StacksLinkedList();
-            stacks.Enqueue(56);
+            stacks.Enqueue(56);                          
             stacks.Enqueue(30);
             stacks.Enqueue(70);
+            stacks.Dequeue();
             stacks.Display();
+            
         }
     }
 }
