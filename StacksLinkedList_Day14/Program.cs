@@ -7,13 +7,10 @@ namespace StacksLinkedList_Day14
         static void Main(string[] args)
         {
             StacksLinkedList stacks = new StacksLinkedList();
-            stacks.Push(70);
-            stacks.Push(30);
-            stacks.Push(56);
+            stacks.Enqueue(56);
+            stacks.Enqueue(30);
+            stacks.Enqueue(70);
             stacks.Display();
-            stacks.IsEmpty();
-            stacks.Display();                   //this shows that the stack is empty
-
         }
     }
 }

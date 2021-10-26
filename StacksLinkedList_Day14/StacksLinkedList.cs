@@ -67,6 +67,26 @@ namespace StacksLinkedList_Day14
             }
         }
 
+        internal void Enqueue(int data)        //the append(enqueue) method it is similar to Add method or Add last
+        {
+            Node node = new Node(data);        //creating a node object of the Node class 
+            if (this.top == null)
+            {
+                this.top = node;
+            }
+            else
+            {
+                Node temp = top;
+                while (temp.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = node;
+            }
+            Console.WriteLine("{0} added into Queue", node.data);
+        }
+
+
 
     }
 }
