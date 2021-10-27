@@ -10,7 +10,7 @@ namespace StacksLinkedList_Day14
             stacks.Enqueue(56);                          
             stacks.Enqueue(30);
             stacks.Enqueue(70);
-            stacks.Dequeue();
+            stacks.Dequeue();          //dequeue meaning deletion from the first or top
             stacks.Display();
             
         }
