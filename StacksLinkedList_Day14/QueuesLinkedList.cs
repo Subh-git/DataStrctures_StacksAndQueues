@@ -72,7 +72,7 @@ namespace StacksLinkedList_Day14
     {
         internal Node front;                            //we use front and rear in queus
 
-        internal void Display()          //the display method is similar to the display method of linkeddlist
+        internal void Display()                         //the display method is similar to the display method of linkeddlist
         {
             Node temp = this.front;
             if (temp == null)
@@ -105,7 +105,7 @@ namespace StacksLinkedList_Day14
             Console.WriteLine("{0} added into Queue", node.data);
         }
 
-        internal void Dequeue()               //deletes the first node of the queue
+        internal void Dequeue()                                                //deletes the first node of the queue
         {
             if (this.front == null)
                 Console.WriteLine("Deletion is not posssible");
