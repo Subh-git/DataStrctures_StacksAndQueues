@@ -8,7 +8,7 @@ namespace StacksLinkedList_Day14
 {
     public class StacksLinkedList
     {
-        internal Node top;                              //instead of head we use top and bottom in stacks and queues
+        internal Node top;                              //instead of head we use top and bottom in stacks
 
         internal void Push(int data)                   //creating the psuh method which is similar to add first method in linkedlist
         {
@@ -60,23 +60,42 @@ namespace StacksLinkedList_Day14
 
         internal void IsEmpty()          //this repreatedly calls the pop method that will delete the first element from the stack in each iteration
         {
-            while(this.top != null)
+            while (this.top != null)
             {
                 Peek();
                 Pop();
+            }
+        }
+    }
+
+    public class QueuesLinkedList
+    {
+        internal Node front;                            //we use front and rear in queus
+
+        internal void Display()          //the display method is similar to the display method of linkeddlist
+        {
+            Node temp = this.front;
+            if (temp == null)
+            {
+                Console.WriteLine("Stack is empty");
+            }
+            while (temp != null)
+            {
+                Console.Write("\n"+temp.data);
+                temp = temp.next;
             }
         }
 
         internal void Enqueue(int data)        //the append(enqueue) method it is similar to Add method or Add last
         {
             Node node = new Node(data);        //creating a node object of the Node class 
-            if (this.top == null)
+            if (this.front == null)
             {
-                this.top = node;
+                this.front = node;
             }
             else
             {
-                Node temp = top;
+                Node temp = front;
                 while (temp.next != null)
                 {
                     temp = temp.next;
@@ -88,11 +107,11 @@ namespace StacksLinkedList_Day14
 
         internal void Dequeue()               //deletes the first node of the queue
         {
-            if (this.top == null)
+            if (this.front == null)
                 Console.WriteLine("Deletion is not posssible");
 
-            Console.WriteLine("Deleted node from Queue: " + this.top.data);  //prints the deleted node
-            this.top = this.top.next;
+            Console.WriteLine("Deleted node from Queue: " + this.front.data);  //prints the deleted node
+            this.front = this.front.next;
         }
 
 

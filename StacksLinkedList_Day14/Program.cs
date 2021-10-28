@@ -6,13 +6,11 @@ namespace StacksLinkedList_Day14
     {
         static void Main(string[] args)
         {
-            StacksLinkedList stacks = new StacksLinkedList();
-            stacks.Enqueue(56);                          
-            stacks.Enqueue(30);
-            stacks.Enqueue(70);
-            stacks.Dequeue();          //dequeue meaning deletion from the first or top
-            stacks.Display();
-            
+            QueuesLinkedList queues = new QueuesLinkedList();          //creating the queue object and calling it
+            queues.Enqueue(56);
+            queues.Enqueue(30);
+            queues.Enqueue(70);
+            queues.Display();
         }
     }
 }
